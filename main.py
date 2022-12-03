@@ -1,6 +1,7 @@
 # Restaurant Manager
 import tkinter
 
+# ---------------------------- Window Setup ---------------------------------#
 # Initialize window
 application = tkinter.Tk()
 
@@ -19,8 +20,9 @@ application.title("My Restaurant - Invoicing System")
 # Window background color
 application.config(bg="burlywood")
 
-# Panels Setup
-# Top panel
+# ---------------------------- Panels Setup ---------------------------------#
+
+# ------------------------------ Top Panel ----------------------------------#
 top_panel = tkinter.Frame(application, bd=1, relief=tkinter.FLAT)
 top_panel.pack(side=tkinter.TOP)
 
@@ -33,6 +35,7 @@ top_panel_title = tkinter.Label(top_panel,
                                 width=27)
 top_panel_title.grid(row=0, column=0)
 
+# ------------------------------ Left Panel ----------------------------------#
 # Left panel
 left_panel = tkinter.Frame(application, bd=1, relief=tkinter.FLAT)
 left_panel.pack(side=tkinter.LEFT)
@@ -67,5 +70,21 @@ dessert_panel = tkinter.LabelFrame(left_panel,
                                    bd=1,
                                    relief=tkinter.FLAT)
 dessert_panel.pack(side=tkinter.LEFT)
+
+# ------------------------------ Right Panel ----------------------------------#
+right_panel = tkinter.Frame(application, bd=1, relief=tkinter.FLAT)
+right_panel.pack(side=tkinter.RIGHT)
+
+# Calculator panel
+calculator_panel = tkinter.Frame(right_panel, bd=1, relief=tkinter.FLAT, bg="burlywood")
+calculator_panel.pack()
+
+# Invoice panel
+invoice_panel = tkinter.Frame(right_panel, bd=1, relief=tkinter.FLAT, bg="burlywood")
+invoice_panel.pack()
+
+# Button panel
+button_panel = tkinter.Frame(right_panel, bd=1, relief=tkinter.FLAT, bg="burlywood")
+button_panel.pack()
 
 application.mainloop()
