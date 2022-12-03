@@ -87,4 +87,57 @@ invoice_panel.pack()
 button_panel = tkinter.Frame(right_panel, bd=1, relief=tkinter.FLAT, bg="burlywood")
 button_panel.pack()
 
+# ------------------------------ Products List ----------------------------------#
+food_list = ["Chicken", "Lamb", "Salmon", "Hake", "Kebabs", "Pizza", "Chinese", "Fish"]
+drinks_list = ["Lemonade", "Soda", "Juice", "Cola", "Wine1", "Wine2", "Beer1", "Beer2"]
+dessert_list = ["Ice cream", "Fruit", "Brownies", "Pudding", "Cheesecake", "Cake1", "Cake2", "Cake3"]
+
+# Create food items
+food_items = []
+food_counter = 0
+
+for food in food_list:
+    food_items.append("")
+    food_items[food_counter] = tkinter.IntVar()
+    food_checkbox = tkinter.Checkbutton(food_panel,
+                                        text=food.title(),
+                                        font=("Dosis", 19),
+                                        onvalue=1,
+                                        offvalue=0,
+                                        variable=food_items[food_counter])
+    food_checkbox.grid(row=food_counter, column=0, sticky=tkinter.W)
+    food_counter += 1
+
+# Create drink items
+drink_items = []
+drink_counter = 0
+
+for drink in drinks_list:
+    drink_items.append("")
+    drink_items[drink_counter] = tkinter.IntVar()
+    drink_checkbox = tkinter.Checkbutton(drink_panel,
+                                         text=drink.title(),
+                                         font=("Dosis", 19),
+                                         onvalue=1,
+                                         offvalue=0,
+                                         variable=drink_items[drink_counter])
+    drink_checkbox.grid(row=drink_counter, column=0, sticky=tkinter.W)
+    drink_counter += 1
+
+# Create dessert items
+dessert_items = []
+dessert_counter = 0
+
+for dessert in dessert_list:
+    dessert_items.append("")
+    dessert_items[dessert_counter] = tkinter.IntVar()
+    dessert_checkbox = tkinter.Checkbutton(dessert_panel,
+                                           text=dessert.title(),
+                                           font=("Dosis", 19),
+                                           onvalue=1,
+                                           offvalue=0,
+                                           variable=dessert_items[dessert_counter])
+    dessert_checkbox.grid(row=dessert_counter, column=0, sticky=tkinter.W)
+    dessert_counter += 1
+
 application.mainloop()
