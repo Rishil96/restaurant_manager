@@ -19,4 +19,53 @@ application.title("My Restaurant - Invoicing System")
 # Window background color
 application.config(bg="burlywood")
 
+# Panels Setup
+# Top panel
+top_panel = tkinter.Frame(application, bd=1, relief=tkinter.FLAT)
+top_panel.pack(side=tkinter.TOP)
+
+# Title for Top Panel
+top_panel_title = tkinter.Label(top_panel,
+                                text="Invoicing System",
+                                fg="azure4",
+                                font=("Dosis", 50),
+                                bg="burlywood",
+                                width=27)
+top_panel_title.grid(row=0, column=0)
+
+# Left panel
+left_panel = tkinter.Frame(application, bd=1, relief=tkinter.FLAT)
+left_panel.pack(side=tkinter.LEFT)
+
+# Cost panel
+cost_panel = tkinter.Frame(left_panel, bd=1, relief=tkinter.FLAT)
+cost_panel.pack(side=tkinter.BOTTOM)
+
+# Food panel
+food_panel = tkinter.LabelFrame(left_panel,
+                                text="Food",
+                                fg="azure4",
+                                font=("Dosis", 19),
+                                bd=1,
+                                relief=tkinter.FLAT)
+food_panel.pack(side=tkinter.LEFT)
+
+# Drink panel
+drink_panel = tkinter.LabelFrame(left_panel,
+                                 text="Drinks",
+                                 fg="azure4",
+                                 font=("Dosis", 19),
+                                 bd=1,
+                                 relief=tkinter.FLAT)
+drink_panel.pack(side=tkinter.LEFT)
+
+# Dessert panel
+dessert_panel = tkinter.LabelFrame(left_panel,
+                                   text="Desserts",
+                                   fg="azure4",
+                                   font=("Dosis", 19),
+                                   bd=1,
+                                   relief=tkinter.FLAT)
+dessert_panel.pack(side=tkinter.LEFT)
+
 application.mainloop()
